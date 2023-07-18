@@ -19,11 +19,11 @@ mongod --dbpath .
 
 (2) Execute: 
 ```
-docker run -it pockettheories/approxmongodb
+docker run -it pockettheories/countmongodb
 ```
 ...or, an alternative for (2) is 
 ```
-git clone https://github.com/pockettheories/approxmongodb.git
-cd approxmongodb
+git clone https://github.com/pockettheories/countmongodb.git
+cd countmongodb
 ./build.sh && ./runme.sh
 ```
