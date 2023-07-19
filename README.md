@@ -35,6 +35,6 @@ cd countmongodb
 ```
 git clone https://github.com/pockettheories/countmongodb.git
 cd countmongodb
-docker-compose up
+docker-compose up -d
 docker logs countmongodb-app-1
 ```
