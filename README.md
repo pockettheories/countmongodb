@@ -12,6 +12,8 @@ We can apply this concept to web page visitor counting - we will generate a rand
 
 ## Instructions
 
+### With a local MongoDB instance
+
 (1) Run mongod on localhost (create a directory, and execute this within the new directory)
 ```
 mongod --dbpath .
@@ -26,4 +28,13 @@ docker run -it pockettheories/countmongodb
 git clone https://github.com/pockettheories/countmongodb.git
 cd countmongodb
 ./build.sh && ./runme.sh
+```
+
+### Without a local MongoDB instance
+
+```
+git clone https://github.com/pockettheories/countmongodb.git
+cd countmongodb
+docker-compose up -d
+docker logs countmongodb-app-1
 ```
