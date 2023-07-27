@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mdb
+spec:
+  serviceName: mdb-svc
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mdb
+        image: mongo:6.0.7
+        ports:
+          - containerPort: 27017
+            name: mongodb

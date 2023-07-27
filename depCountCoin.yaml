@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep-countcoin
+  labels:
+    app: countcoin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: countcoin
+  template:
+    metadata:
+      labels:
+        app: countcoin
+    spec:
+      containers:
+      - name: countcoin
+        image: pockettheories/countmongodb
+        env:
+        - name: mongouri
+          value: "mongodb://mdb-svc"
